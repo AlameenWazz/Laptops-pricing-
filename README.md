@@ -1,49 +1,62 @@
 # Laptops-pricing-
 Date created
-20th July 2020
+January 2024
 
 Project Title
-Disaster Response Pipeline Project
+Laptops Pricing Project
 
 Description
-This Project is part of the Data Science Nanodegree Program by Udacity in collaboration with Figure Eight. Figure Eight provides the data to build a model for an API that classifies disaster messages. When disaster strikes, it creates different and complex challenges for the organizations tasked with the responsibility of responding. They have to go through thousands of messages to understand what is needed in every situation. Filtering out these messages and deciding which need their response is a daunting task especially in massive disaster situations. In this project, predictive modeling is used to make the classification of these messages easier and more efficient.
+This Project is part of the IBM Data Analyst specializatiion. The dataset used is a modified subset that maps the price of laptops with different attributes.
+The dataset is a filtered and modified version of the Laptop Price Prediction using specifications dataset, available under the Database Contents License (DbCL) v1.0 on the Kaggle website.
+Parameters
+The parameters used in the dataset are:
+1. Manufacturer The company that manufactured the laptop
+2. Category The category to which the laptop belongs: This parameter is mapped to numerical values.
+   
+The project is divided into 5 sections:
 
-The project is divided into 3 sections:
+Importing the Dataset - 
+Imported the dataset from a CSV file to a Pandas dataframe
+Develop some basic insights about the dataset
 
-ETL Pipeline - The first part of the data pipeline extracts, transforms, and loads the messages and categories data. The datasets are cleaned and then stored in a SQLite database. All the data cleaning is done with pandas. The ETL script is stored as process_data.py
+Data Wrangling -
+Handling missing data in different ways
+Correcting the data type of different data values as per requirement
+Standardizing and normalizing the appropriate data attributes
+Visualizing the data as grouped bar graph using Binning
+Cnverting a categorical data into numerical indicator variables
 
-Machine Learning Pipeline - For the machine learning section, the data is split into a training set and a test set. Then, a machine learning pipeline is created that uses NLTK, as well as scikit-learn's Pipeline and GridSearchCV to output a final model that uses the message column to predict classifications for 36 categories (multi-output classification). The text data was trained on a multioutput classifier model using AdaBoost Classifier. Finally, the model is exported as a pickle file which is then used in the machine learning script saved as train_classifier.py. The AdaBoost classifier model scored had an overall accuracy of 92.88% after tuning the parameters using GridSearchCV
+Exploratory Data Analysis -
+Visualiziing individual feature patterns
+Running descriptive statistical analysis on the dataset
+Using groups and pivot tables to find the effect of categorical variables on price
+Using Pearson Correlation to measure the interdependence between variables
 
-Web App - This shows the model results in real time. The Flask app classifies input messages and shows visualizations of key statistics of the dataset.
+Model Development -  
+Using Linear Regression in one variable to fit the parameters to a model
+Using Linear Regression in multiple variables to fit the parameters to a model
+Using Polynomial Regression in single variable tofit the parameters to a model
+Creating a pipeline for performing linear regression using multiple features in polynomial scaling
+Evaluating the performance of different forms of regression on basis of MSE and R^2 parameters
+
+Model Evaluation and Refinement-
+Using training, testing and cross validation to improve the performance of the dataset.
+Identifying the point of overfitting of a model
+Using Ridge Regression to identify the change in performance of a model based on its hyperparameters
+Using Grid Search to identify the best performing model using different hyperparameters
+
+
 
 INSTALATION
 Python 3.5 and above
-Machine Learning Libraries: NumPy, scipy, Pandas, Scikit-Learn
-Natural Language Process Libraries: NLTK
-SQLlite Database Libraries: SQLalchemy
-Web App and Data Visualization: Flask, Plotly
-Files
-process_data.py
-train_classifier.py
-run.py
-ETL Pipeline Preparation.ipynb
-ML Pipeline Preparation.ipynb
-Instructions:
-Run the following commands in the project's root directory to set up your database and model.
+Machine Learning Libraries: NumPy, scipy, Pandas, Scikit-Learn, Matplotplib, Seaborn.
 
-To run ETL pipeline that cleans data and stores in database python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db
-To run ML pipeline that trains classifier and saves python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl
-Run the following command in the app's directory to run your web app. python run.py
-
-Go to http://0.0.0.0:3001/
 
 Author
-Yasir Waziri
+Alameen Waziri
+
 Acknowledgements
-Udacity Data Scientist Nanodegree that provided the platform for the project
-Figure Eight for providing messages dataset
-https://github.com/matteobonanomi/dsnd-disaster-response
-https://github.com/kzhao682/Disaster_Response
-stackoverflow.com
+IBM Skills Network that provided the platform for the project
+
 Images
-See some images in the images folder or click here https://github.com/yaswaz/Disaster_Response_Project/tree/master/images
+See some images in the images folder or click here 
